@@ -26,6 +26,12 @@
             </li>
           </ul>
 
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <p class="nav-link" (click)="loadPasses()">Passes</p>
+            </li>
+          </ul>
+
           <ul class="navbar-nav d-none d-md-block">
             <!-- Login button: show if NOT authenticated -->
             <li class="nav-item" *ngIf="auth.loggedIn === false">
@@ -58,7 +64,7 @@
               <div class="dropdown-menu dropdown-menu-left" ngbDropdownMenu>
                 <!-- Show the user's full name from the id token here -->
                 <div class="dropdown-header" *ngIf="profile">
-                  {{ profile.name }}
+                  {{ profile.name }} :)
                 </div>
                 <a
                   routerLink="/profile"

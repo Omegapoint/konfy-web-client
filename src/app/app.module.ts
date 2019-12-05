@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightModule } from 'ngx-highlightjs';
 import json from 'highlight.js/lib/languages/json';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { PassesComponent } from './passes/passes.component';
 
 export function hljsLanguages() {
   return [{ name: 'json', func: json }];
@@ -28,11 +30,13 @@ export function hljsLanguages() {
     FooterComponent,
     HeroComponent,
     HomeContentComponent,
-    LoadingComponent
+    LoadingComponent,
+    PassesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     HighlightModule.forRoot({
       languages: hljsLanguages

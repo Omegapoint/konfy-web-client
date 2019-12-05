@@ -28,7 +28,7 @@
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <p class="nav-link" (click)="loadPasses()">Passes</p>
+              <a routerLink="passes" *ngIf="auth.loggedIn">Passes</a>
             </li>
           </ul>
 

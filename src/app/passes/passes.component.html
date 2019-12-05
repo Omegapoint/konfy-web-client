@@ -1,0 +1,5 @@
+<button (click)="passes()">Ping API</button>
+
+<pre *ngIf="responseJson">
+<code>{{ responseJson | json }}</code>
+</pre>
